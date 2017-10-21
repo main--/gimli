@@ -149,7 +149,7 @@
 //!
 //! # fn main() {}
 //! ```
-#![deny(missing_docs)]
+// #![deny(missing_docs)]
 #![deny(missing_debug_implementations)]
 // Allow clippy warnings when we aren't building with clippy.
 #![allow(unknown_lints)]
