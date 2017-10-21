@@ -3057,6 +3057,12 @@ impl<R: Reader> CallFrameInstruction<R> {
                 })
             }
 
+            // FIXME
+            constants::DW_CFA_GNU_args_size => {
+                let _ = input.read_uleb128()?;
+                Ok(CallFrameInstruction::Nop)
+            }
+
             otherwise => Err(Error::UnknownCallFrameInstruction(otherwise)),
         }
     }
